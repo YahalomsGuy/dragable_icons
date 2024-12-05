@@ -60,6 +60,7 @@ class _IconsDragAndDropState extends State<IconsDragAndDrop>
   @override
   Widget build(BuildContext context) {
     bool isDropped = false;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.grey, //const Color(0xFFF7F7F7),
       appBar: appBar(),
@@ -67,7 +68,7 @@ class _IconsDragAndDropState extends State<IconsDragAndDrop>
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-              width: MediaQuery.of(context).size.width,
+              width: size.width,
               color: Colors.white,
               height: 140,
               child: dragTarget(isDropped)),
